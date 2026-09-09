@@ -1,1 +1,0 @@
-const b=document.querySelector('.menu-button'),n=document.querySelector('.nav-links');if(b&&n)b.addEventListener('click',()=>n.classList.toggle('open'));document.querySelectorAll('img[data-fallback]').forEach(i=>i.addEventListener('error',()=>i.style.display='none'));
