@@ -333,3 +333,12 @@ footer{border-top-color:var(--navy);padding-bottom:110px}
     margin: 24px 0 45px;
   }
 }
+.footer-copyright {
+  margin: 28px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+}
