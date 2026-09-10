@@ -535,3 +535,20 @@ footer{border-top-color:var(--navy);padding-bottom:110px}
     transition: none;
   }
 }
+/* Hover: solid circle that inverts the colours underneath */
+.goat-cursor.is-interactive {
+  mix-blend-mode: difference;
+}
+
+.goat-cursor.is-interactive::before {
+  opacity: 0;
+}
+
+.goat-cursor.is-interactive::after {
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 0;
+  box-shadow: none;
+  opacity: 1;
+}
