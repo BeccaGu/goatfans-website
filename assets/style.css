@@ -231,5 +231,49 @@ footer{border-top-color:var(--navy);padding-bottom:110px}
     padding-left: 0;
     padding-top: 30px;
   }
+.playlist-text.playlist-with-image {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(30px, 6vw, 90px);
 }
+
+.playlist-with-image .playlist-artwork {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.playlist-with-image .playlist-artwork img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: transparent;
+}
+
+.playlist-with-image .playlist-copy {
+  min-width: 0;
+  padding-top: 0;
+}
+
+.playlist-with-image .playlist-copy h2 {
+  color: #142640;
+}
+
+.playlist-with-image .playlist-artwork:focus-visible {
+  outline: 2px solid #142640;
+  outline-offset: 8px;
+}
+
+@media (max-width: 750px) {
+  .playlist-text.playlist-with-image {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .playlist-with-image .playlist-artwork {
+    max-width: 420px;
+  }
+}}
 
