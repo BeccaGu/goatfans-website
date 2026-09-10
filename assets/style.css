@@ -145,4 +145,91 @@ footer{border-top-color:var(--navy);padding-bottom:110px}
 .project-heading{gap:12px}.project-grid .prose{padding-left:18px}
 .closing h2{grid-row:auto}.closing p,.closing .text-link{grid-column:1}
 #contact{padding:28px 20px}.origin{padding:40px 0 50px}
+/* Combined contact and music submissions */
+#contact.contact-combined {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: clamp(32px, 6vw, 90px);
+  padding: clamp(28px, 5vw, 70px);
+  margin: 30px 0 65px;
+  background: #142640;
+  color: #f4f2eb;
+  border: 0;
 }
+
+#contact.contact-combined .eyebrow,
+#contact.contact-combined h2 {
+  color: #f2fb7a;
+}
+
+#contact.contact-combined h2 {
+  margin-bottom: 28px;
+}
+
+#contact.contact-combined h3 {
+  color: #f4f2eb;
+  margin-top: 0;
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+#contact.contact-combined .contact-heading,
+#contact.contact-combined .contact-submissions {
+  min-width: 0;
+}
+
+#contact.contact-combined .contact-email {
+  display: inline-block;
+  margin-top: 12px;
+  color: #f2fb7a;
+  font-size: clamp(20px, 2.3vw, 32px);
+  line-height: 1.4;
+  letter-spacing: -0.035em;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 7px;
+  overflow-wrap: anywhere;
+}
+
+#contact.contact-combined .contact-email span {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+#contact.contact-combined .contact-submissions {
+  border-left: 1px solid rgb(244 242 235 / 25%);
+  padding-left: clamp(24px, 4vw, 55px);
+}
+
+#contact.contact-combined .contact-playlist {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 18px;
+  background: #f2fb7a;
+  color: #142640;
+  text-decoration: none;
+}
+
+#contact.contact-combined .contact-playlist:hover {
+  background: #f4f2eb;
+  color: #142640;
+}
+
+#contact.contact-combined a:focus-visible {
+  outline: 2px solid #f2fb7a;
+  outline-offset: 6px;
+}
+
+@media (max-width: 750px) {
+  #contact.contact-combined {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 45px;
+  }
+
+  #contact.contact-combined .contact-submissions {
+    border-left: 0;
+    border-top: 1px solid rgb(244 242 235 / 25%);
+    padding-left: 0;
+    padding-top: 30px;
+  }
+}
+
