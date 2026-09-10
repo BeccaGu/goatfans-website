@@ -467,8 +467,8 @@ footer{border-top-color:var(--navy);padding-bottom:110px}
   position: fixed;
   top: 0;
   left: 0;
-  width: 34px;
-  height: 34px;
+  width: 80px;
+  height: 80px;
   z-index: 2147483647;
   pointer-events: none;
   opacity: 0;
