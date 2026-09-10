@@ -342,3 +342,123 @@ footer{border-top-color:var(--navy);padding-bottom:110px}
   line-height: 1.5;
   text-align: left;
 }
+/* 1. 基础过渡 */
+.svc-map-link,
+.action-link,
+.contact-playlist,
+.services-contact,
+.svc-top {
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+/* 服务卡片的小字跟随卡片变色 */
+.svc-map-link .eyebrow {
+  color: inherit;
+}
+
+/* 链接箭头 */
+.text-link span[aria-hidden="true"],
+.svc-platform-grid dt a span[aria-hidden="true"] {
+  display: inline-block;
+  transition: transform 180ms ease;
+}
+
+/* 平台名称 */
+.svc-platform-grid dt a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+  transition: text-decoration-color 180ms ease;
+}
+
+/* 2. 只在支持鼠标悬停的设备上启用 */
+@media (hover: hover) and (pointer: fine) {
+
+  /* 服务卡片：海军蓝底、柠檬黄字，轻微上移 */
+  .svc-map-link:hover {
+    background-color: #142640;
+    color: #f2fb7a;
+    border-color: #142640;
+    transform: translateY(-4px);
+  }
+
+  /* 常规行动按钮：反色 */
+  .action-link:hover,
+  .services-contact:hover {
+    background-color: #142640;
+    color: #f2fb7a;
+    transform: translateY(-2px);
+  }
+
+  /* 海军蓝区块中的按钮：变成米白底 */
+  .playlist-with-image .action-link:hover,
+  #contact.contact-combined .contact-playlist:hover {
+    background-color: #f4f2eb;
+    color: #142640;
+  }
+
+  /* 链接箭头向右上方移动 */
+  .text-link:hover span[aria-hidden="true"],
+  .svc-platform-grid dt a:hover span[aria-hidden="true"] {
+    transform: translate(3px, -3px);
+  }
+
+  /* 平台名称：柠檬黄色下划线 */
+  .svc-platform-grid dt a:hover {
+    color: #142640;
+    text-decoration-color: #f2fb7a;
+    text-decoration-thickness: 3px;
+  }
+
+  /* 返回顶部按钮 */
+  .svc-top:hover {
+    background-color: #f2fb7a;
+    color: #142640;
+    transform: translateY(-3px);
+  }
+}
+
+/* 3. 点击时的轻微反馈 */
+.svc-map-link:active,
+.action-link:active,
+.contact-playlist:active,
+.services-contact:active,
+.svc-top:active {
+  transform: translateY(1px);
+}
+
+/* 4. 键盘操作也能看清当前位置 */
+.svc-map-link:focus-visible {
+  background-color: #142640;
+  color: #f2fb7a;
+  outline: 2px solid #142640;
+  outline-offset: 5px;
+}
+
+.svc-platform-grid dt a:focus-visible {
+  outline: 2px solid #142640;
+  outline-offset: 5px;
+}
+
+/* 5. 尊重系统的“减少动态效果”设置 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .svc-map-link,
+  .action-link,
+  .contact-playlist,
+  .services-contact,
+  .svc-top,
+  .text-link span[aria-hidden="true"],
+  .svc-platform-grid dt a,
+  .svc-platform-grid dt a span[aria-hidden="true"] {
+    transition: none;
+    transform: none !important;
+  }
+}
